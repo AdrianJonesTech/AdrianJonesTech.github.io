@@ -1,0 +1,41 @@
+/* Custom styles for dark mode and specific tweaks */
+body.dark-mode {
+    background-color: #1f2937;
+    color: #ffffff;
+}
+
+/* Smooth scroll for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Cursor styling */
+#cursor {
+    display: inline-block;
+    font-weight: normal;
+}
+
+/* Animated gradient for hero section */
+.animated-gradient {
+    background: linear-gradient(45deg, #3b82f6, #7c3aed, #ec4899, #eab308);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Optional: Custom button hover effects */
+button:hover, a:hover {
+    transition: all 0.3s ease;
+}
+
+/* Ensure dark mode compatibility for hero section */
+body.dark-mode .animated-gradient {
+    background: linear-gradient(45deg, #1e3a8a, #4c1d95, #9f1239, #b45309);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
