@@ -29,7 +29,7 @@ if (localStorage.getItem('theme') === 'dark') {
 const typingText = document.getElementById('typing-text');
 const cursor = document.getElementById('cursor');
 const subtitle = document.getElementById('subtitle');
-const textToType = "Hi, I'm Adrian Jones";
+const textToType = "Hi, I'm Adrian.";
 let index = 0;
 
 function type() {
