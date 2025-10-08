@@ -8,28 +8,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Dark/light mode toggle
-const toggleButton = document.getElementById('theme-toggle');
-const body = document.body;
-
-toggleButton.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const isDarkMode = body.classList.contains('dark-mode');
-    toggleButton.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-});
-
-// Apply saved theme on page load
-if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-mode');
-    toggleButton.textContent = 'Light Mode';
-}
-
 // Typing animation for hero section
 const typingText = document.getElementById('typing-text');
 const cursor = document.getElementById('cursor');
 const subtitle = document.getElementById('subtitle');
-const textToType = "Hi, I'm Adrian.";
+const textToType = "Adrian Jones";
 let index = 0;
 
 function type() {
