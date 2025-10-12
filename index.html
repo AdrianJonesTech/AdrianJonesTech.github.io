@@ -6,16 +6,17 @@
     <title>Adrian Jones - Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body class="animated-gradient text-white transition-colors duration-300">
 <!-- Navbar -->
-<header class="bg-white/10 dark:bg-gray-800/10 backdrop-blur-sm shadow sticky top-0 z-10">
+<header class="bg-white/5 dark:bg-gray-900/20 backdrop-blur-sm shadow sticky top-0 z-10">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
         <h1 class="text-xl font-bold">AJ</h1>
         <ul class="flex space-x-6">
-            <li><a href="#about" class="hover:text-blue-300">About</a></li>
-            <li><a href="#projects" class="hover:text-blue-300">Projects</a></li>
+            <li><a href="#about" class="hover:text-blue-400">About</a></li>
+            <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
         </ul>
     </nav>
 </header>
@@ -23,8 +24,8 @@
 <!-- Hero Section -->
 <section id="home" class="py-20 flex items-center text-white">
     <div class="container mx-auto px-6 text-center">
-        <h1 class="text-5xl font-bold mb-4">
-            <span id="typing-text"></span>
+        <h1 class="text-5xl mb-4">
+            <span id="typing-text" class="font-greatvibes"></span>
             <span id="cursor" class="animate-pulse">|</span>
         </h1>
         <p id="subtitle" class="text-xl mb-6 opacity-0">Full-Stack Engineer & Tech Lead | Evangelizing simple, clear solutions that scale</p>
@@ -32,20 +33,23 @@
 </section>
 
 <!-- About Section -->
-<section id="about" class="py-16 bg-gray-50/50 dark:bg-gray-900/50"> <!-- Optional: subtle bg for separation -->
+<section id="about" class="py-16 bg-gray-900/20 dark:bg-gray-900/50"> <!-- Optional: subtle bg for separation -->
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
-        <div class="flex flex-col items-center">
-            <div class="max-w-prose text-left space-y-6"> <!-- Tight block + spacing between paras -->
+        <div class="grid grid-cols-1 gap-10 items-center">
+
+            <!-- Text block with centered title over it -->
+            <div class="max-w-prose mx-auto text-left space-y-6"> <!-- Tight block + spacing between paras -->
+                <h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
                 <p class="text-lg">I'm Adrian Jones, a software engineer with over 20 years crafting scalable, high-performance systems that just work. From full-stack development to platform engineering, I've led teams and delivered robust solutions—on-premise or cloud—for everything from legislative tools to VA APIs. My focus? Simple, efficient design that prioritizes clarity and reliability, turning complex challenges into streamlined code.</p>
-                
+
                 <p class="text-lg">Leading engineering teams has been the heart of my journey—I've sat with developers in those quiet 1:1 moments, unraveling code knots together, and gently nudged teams toward DevOps rhythms with CI/CD pipelines that eased the chaos of deployments. It felt deeply rewarding to build Solr-optimized search that brought clarity to public legislative chaos, or craft journal apps that captured the pulse of sessions without the usual headaches. Lately, automating API workflows has meant catching outages before they sting, and walking a team through a Django upgrade turned what could have been stress into shared triumphs—restoring trust with partners, smoothing paths for users with better UX, and opening doors for talented hires through thoughtful interviews.</p>
 
                 <p class="text-lg">When I'm not optimizing pipelines or refining UIs, you'll find me watching sports, exploring the board game hobby, or cheering on the Licking Heights Marching Hornets! I believe great software, like great engineering, is about precision and purpose.</p>
-                
+
                 <p class="text-lg font-semibold text-center">Let's build something solid.</p>
-                <p class="text-lg font-semibold text-center"><a href="mailto:Adrian.W.Jones@outlook.com" target="_blank" rel="noopener noreferrer nofollow">Reach out</a> or connect on <a href="https://www.linkedin.com/in/adrian-jones-7a68b4132/" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a> / <a href="https://github.com/AdrianJonesTech" target="_blank" rel="noopener noreferrer nofollow">GitHub</a>.</p>
+                <p class="text-lg font-semibold text-center"><a href="mailto:Adrian.W.Jones@outlook.com" target="_blank" rel="noopener noreferrer nofollow" class="text-blue-300 underline underline-offset-4 decoration-2 decoration-blue-300/80 hover:text-blue-200 hover:decoration-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400/60 rounded-sm transition-colors">Reach out</a> or connect on <a href="https://www.linkedin.com/in/adrian-jones-7a68b4132/" target="_blank" rel="noopener noreferrer nofollow" class="text-blue-300 underline underline-offset-4 decoration-2 decoration-blue-300/80 hover:text-blue-200 hover:decoration-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400/60 rounded-sm transition-colors">LinkedIn</a> / <a href="https://github.com/AdrianJonesTech" target="_blank" rel="noopener noreferrer nofollow" class="text-blue-300 underline underline-offset-4 decoration-2 decoration-blue-300/80 hover:text-blue-200 hover:decoration-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400/60 rounded-sm transition-colors">GitHub</a>.</p>
             </div>
+
         </div>
     </div>
 </section>
@@ -56,15 +60,16 @@
         <h2 class="text-3xl font-bold mb-8 text-center">Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Board Games Search App Card -->
-            <div class="bg-white/10 dark:bg-gray-700/30 p-6 rounded-lg shadow">
+            <div class="bg-white/5 dark:bg-gray-800/40 p-6 rounded-lg shadow">
                 <h3 class="text-xl font-semibold mb-2">Board Games Search App</h3>
                 <p class="mb-4">A Django app for searching and filtering top-ranked board games from BoardGameGeek with advanced filters and dynamic UI.</p>
-                <a href="https://github.com/AdrianJonesTech/boardgames-search-app" class="text-blue-300 hover:underline">View on GitHub</a>
+                <a href="https://github.com/AdrianJonesTech/boardgames-search-app" class="inline-flex items-center gap-1 text-blue-300 underline underline-offset-4 decoration-2 decoration-blue-300/80 hover:text-blue-200 hover:decoration-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400/60 rounded-sm transition-colors">View on GitHub</a>
             </div>
             <!-- Add more project cards as you create projects -->
         </div>
     </div>
 </section>
+
 
 <script src="/assets/js/script.js"></script>
 </body>

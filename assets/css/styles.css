@@ -17,10 +17,12 @@ html {
 
 /* Animated gradient for hero section */
 .animated-gradient {
-    background: linear-gradient(45deg, #3b82f6, #7c3aed, #ec4899, #eab308);
+    background: linear-gradient(45deg, #1d4ed8, #5b21b6, #be185d, #b45309);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
 }
+
+.font-signature { font-family: 'Alex Brush', cursive; }
 
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
@@ -38,4 +40,13 @@ body.dark-mode .animated-gradient {
     background: linear-gradient(45deg, #1e3a8a, #4c1d95, #9f1239, #b45309);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
+}
+
+/* About slideshow enhancements: perspective and smoother transforms */
+#about-slideshow {
+    perspective: 800px;
+}
+#about-slideshow img {
+    will-change: transform;
+    transform-origin: center center;
 }
